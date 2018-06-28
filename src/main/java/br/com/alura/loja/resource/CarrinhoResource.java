@@ -16,15 +16,15 @@ public class CarrinhoResource {
 	@GET
 	@Produces(MediaType.APPLICATION_XML)
 	public String busca() {
-	    Carrinho carrinho = new CarrinhoDAO().busca(1l);
-	    return carrinho.toXML();
+		Carrinho carrinho = new CarrinhoDAO().busca(1l);
+		return carrinho.toXML();
 	}
-	
-	 @POST
-	    @Produces(MediaType.APPLICATION_XML)
-	    public String adiciona(String conteudo) {
-	        Carrinho carrinho = (Carrinho) new XStream().fromXML(conteudo);
-	        new CarrinhoDAO().adiciona(carrinho);
-	        return "<status>sucesso</status>";
-	    }
+
+	@POST
+	@Produces(MediaType.APPLICATION_XML)
+	public String adiciona(String conteudo) {
+		Carrinho carrinho = (Carrinho) new XStream().fromXML(conteudo);
+		new CarrinhoDAO().adiciona(carrinho);
+		return "<status>sucesso</status>";
+	}
 }
