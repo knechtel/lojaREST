@@ -8,7 +8,7 @@ Aplicação que utiliza REST para troca de mensagem(XML), tem um banco de dados 
 
 
 Pedaço de código que representa o serviço de carrinho
-```
+```Java
 
 @Path("carrinhos")
 public class CarrinhoResource {
@@ -25,7 +25,7 @@ public class CarrinhoResource {
 
 Teste unitário serve para simular um cliente consumindo recurso.
 
-```
+```Java
     @Before
     public void before() {
       
